@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <link href="https://anime-bk-listv3.github.io/Bartender-Kami-no-Glass-ep1.html" rel="canonical"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Bartender: Kami no Glass — แก้วแห่งเทพเจ้า ตอนที่ 1 พากย์ไทย</title>
+  <meta name="description" content="ดูอนิเมะ Bartender: Kami no Glass — แก้วแห่งเทพเจ้า ตอนที่ 1 พากย์ไทยแบบเต็มตอน พร้อมลิงก์ดูทุกตอนในซีรีส์นี้">
+  <link rel="icon" href="https://img2.pic.in.th/pic/039b1c3dd878efaf74.png" type="image/png"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <a class="logo" href="https://anime-bk.com/">ANIME BK</a>
+    <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+    <nav id="navMenu">
+      <a href="https://anime-bk.com/">หน้าแรก</a>
+      <a href="https://anime-bk.com/thai">อนิเมะพากย์ไทย</a>
+      <a href="https://anime-bk.com/sub">อนิเมะซับไทย</a>
+      <a href="https://anime-bk.com/chinese">อนิเมะจีน</a>
+      <a href="https://anime-bk.com/themovie">เดอะมูฟวี่</a>
+      <a href="https://anime-bk.com/contact">ติดต่อแจ้งปัญหา</a>
+    </nav>
+  </header>
+  <main>
+    <div class="video-title">Bartender: Kami no Glass — แก้วแห่งเทพเจ้า ตอนที่ 1 พากย์ไทย</div>
+    <div class="nav-buttons">
+      
+      <a href="Bartender-Kami-no-Glass-thai.html">ทั้งหมด</a>
+      <a href="Bartender-Kami-no-Glass-ep2.html">ถัดไป</a>
+    </div>
+    <div class="viewer-count">ผู้ชม: <span id="viewerCount">0</span> ครั้ง</div>
+  </main>
+  <div class="video-fullscreen">
+    <div id="video-overlay" onclick="showVideo()">
+      <div class="play-button"></div>
+    </div>
+    <iframe id="videoIframe" style="display:none;" allow="autoplay" allowfullscreen title="Bartender: Kami no Glass ตอนที่ 1 พากย์ไทย"></iframe>
+  </div>
+  <footer>© 2025 ANIME BK — ดูอนิเมะออนไลน์ อนิเมะ BK พากย์ไทย ซับไทย ครบทุกแนว</footer>
+
+  <script>
+    let count = localStorage.getItem("viewerCount_ep1") || 0;
+    document.getElementById("viewerCount").innerText = count;
+    function showVideo() {
+      count++;
+      localStorage.setItem("viewerCount_ep1", count);
+      document.getElementById("viewerCount").innerText = count;
+      setTimeout(() => window.open('/go.html', '_blank'), 700);
+      const encodedSrc = "aHR0cHM6Ly9tb2ppLnRlYW0taW5keS5uZXQvZW1iZWQvM0VpM2FIOUZRby8=";
+      const videoUrl = atob(encodedSrc);
+      const iframe = document.getElementById('videoIframe');
+      iframe.src = videoUrl;
+      iframe.style.display = 'block';
+      document.getElementById('video-overlay').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
