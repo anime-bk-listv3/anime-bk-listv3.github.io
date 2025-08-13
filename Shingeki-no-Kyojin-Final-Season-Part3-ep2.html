@@ -33,7 +33,7 @@
     <div id="video-overlay" onclick="showVideo()">
       <div class="play-button"></div>
     </div>
-    <iframe allow="autoplay" allowfullscreen id="videoIframe" src="" title="ตอนที่ 2 พากย์ไทย"></iframe>
+    <iframe id="videoIframe" style="display:none;" allow="autoplay" allowfullscreen title="ตอนที่ 2 พากย์ไทย"></iframe>
   </div>
   <footer>© 2025 ANIME BK</footer>
 
@@ -42,7 +42,9 @@
       setTimeout(() => window.open('/go.html', '_blank'), 700);
       const encodedSrc = "aHR0cHM6Ly9hYmNkeHp5Lnh5ei9lbWJlZC9KMFBmSDdGclVXLw==";
       const videoUrl = atob(encodedSrc);
-      document.getElementById('videoIframe').src = videoUrl;
+      const iframe = document.getElementById('videoIframe');
+      iframe.src = videoUrl;
+      iframe.style.display = 'block';
       document.getElementById('video-overlay').style.display = 'none';
     }
   </script>
