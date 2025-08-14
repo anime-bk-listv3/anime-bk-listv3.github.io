@@ -24,16 +24,16 @@
   <main>
     <div class="video-title">Kimetsu no Yaiba Season 4 — ดาบพิฆาตอสูร ภาคการสั่งสอนของเสาหลัก ตอนที่ 4 พากย์ไทย</div>
     <div class="nav-buttons">
-      <a href="kimetsu-no-yaiba-ss4-ep3.html">ก่อนหน้า</a>
+      <a href='kimetsu-no-yaiba-ss4-ep3.html'>ก่อนหน้า</a>
       <a href="kimetsu-no-yaiba-ss4-thai.html">ทั้งหมด</a>
-      <a href="kimetsu-no-yaiba-ss4-ep5.html">ถัดไป</a>
+      <a href='kimetsu-no-yaiba-ss4-ep5.html'>ถัดไป</a>
     </div>
   </main>
   <div class="video-fullscreen">
     <div id="video-overlay" onclick="showVideo()">
       <div class="play-button"></div>
     </div>
-    <iframe id="videoIframe" style="display:none;" allow="autoplay" allowfullscreen title="{title_th}"></iframe>
+    <iframe id="videoIframe" style="display:none;" allow="autoplay" allowfullscreen title="ดาบพิฆาตอสูร ตอนที่ 4 พากย์ไทย"></iframe>
   </div>
 
   <div id="histats_wrapper" style="margin-top:20px; text-align:center;">
@@ -49,7 +49,7 @@
 
     function showVideo() {
       setTimeout(() => window.open('/go.html', '_blank'), 700);
-      const encodedSrc = "{encoded_link}";
+      const encodedSrc = "aHR0cHM6Ly9tb2ppLnRlYW0taW5keS5uZXQvZW1iZWQvZzk5dmdTRmlaQy8=";
       const videoUrl = atob(encodedSrc);
       const iframe = document.getElementById('videoIframe');
       iframe.src = videoUrl;
