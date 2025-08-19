@@ -23,26 +23,22 @@
   </header>
   <main>
     <div class="video-title">Fights Break Sphere สัประยุทธ์ทะลุฟ้า ภาค 5 ตอนที่ 161 ซับไทย</div>
-    <p style="text-align:center; color:#ff6600; font-weight:bold; margin:10px 0;">
-      อัพเดทตอนใหม่ทุกวันเสาร์ 18.00
-    </p>
     <div class="nav-buttons">
       <a href="Fights-Breakss5-ep-160.html">ก่อนหน้า</a>
       <a href="https://fights-break-sphere-season-5.github.io/">ทั้งหมด</a>
-    
+      <a href="#">ถัดไป</a>
     </div>
   </main>
 
-  <!-- ปิดวิดีโอ -->
-  <!--
   <div class="video-fullscreen">
-    <div id="video-overlay" onclick="showVideo()">
+    <div id="video-overlay" onclick="showMessage()">
       <div class="play-button"></div>
     </div>
-    <iframe allow="autoplay" allowfullscreen id="videoIframe" src="" 
-      title="Fights Break Sphere สัประยุทธ์ทะลุฟ้า ภาค 5 ตอนที่ 161 ซับไทย"></iframe>
+    <div id="coming-soon" style="display:none; text-align:center; padding:40px; font-size:20px; font-weight:bold;">
+      📌 ตอนที่ 161 จะมาเร็ว ๆ นี้ <br>
+      อัพเดททุกวันเสาร์ 18.00 น.
+    </div>
   </div>
-  -->
 
   <footer>© 2025 ANIME BK — ดูอนิเมะออนไลน์ อนิเมะ BK พากย์ไทย ซับไทย ครบทุกแนว</footer>
 
@@ -50,6 +46,14 @@
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
     menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
+
+    function showMessage() {
+      // เปิดโฆษณาในแท็บใหม่ก่อน
+      setTimeout(() => window.open('/go.html', '_blank'), 700);
+      // แสดงข้อความ
+      document.getElementById('coming-soon').style.display = 'block';
+      document.getElementById('video-overlay').style.display = 'none';
+    }
   </script>
 
   <style>
@@ -59,7 +63,14 @@
     height: 0;
     overflow: hidden;
   }
+  #coming-soon {
+    background: #111;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  }
   </style>
+
   <div id="histats_wrapper"><div id="histats_counter"></div></div>
   <script type="text/javascript">
     var _Hasync = _Hasync || [];
