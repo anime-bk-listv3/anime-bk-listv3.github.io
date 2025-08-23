@@ -26,20 +26,15 @@
     <div class="nav-buttons">
       <a href="Fights-Breakss5-ep-160.html">ก่อนหน้า</a>
       <a href="https://fights-break-sphere-season-5.github.io/">ทั้งหมด</a>
-    
+
     </div>
   </main>
-
   <div class="video-fullscreen">
-    <div id="video-overlay" onclick="showMessage()">
+    <div id="video-overlay" onclick="showVideo()">
       <div class="play-button"></div>
     </div>
-    <div id="coming-soon" style="display:none; text-align:center; padding:40px; font-size:20px; font-weight:bold;">
-      📌 ตอนที่ 161 จะมาเร็ว ๆ นี้ <br>
-      อัพเดททุกวันเสาร์ 18.00 น.
-    </div>
+    <iframe allow="autoplay" allowfullscreen id="videoIframe" src="" title="Fights Break Sphere สัประยุทธ์ทะลุฟ้า ภาค 5 ตอนที่ 161 ซับไทย"></iframe>
   </div>
-
   <footer>© 2025 ANIME BK — ดูอนิเมะออนไลน์ อนิเมะ BK พากย์ไทย ซับไทย ครบทุกแนว</footer>
 
   <script>
@@ -47,11 +42,13 @@
     const navMenu = document.getElementById('navMenu');
     menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
 
-    function showMessage() {
-      // เปิดโฆษณาในแท็บใหม่ก่อน
+    function showVideo() {
       setTimeout(() => window.open('/go.html', '_blank'), 700);
-      // แสดงข้อความ
-      document.getElementById('coming-soon').style.display = 'block';
+      const encodedSrc = "aHR0cHM6Ly92aWRlby1saHI2LTIueHguZmJjZG4ubmV0L28xL3YvdDIvZjIvbTM2Ni9BUU9hbEJnRjBydWNCSEtMNzdLZ2FJYzAyYTIyUWNJWlkzRXM2b3doQVVvU3pwdldLYUN6Q0dGM0ROSklTUzEzV3REUEI4cGNHdXJzUGZHY0dPekg5SXFkY0tvRkNUdTFDMEJUZENWeUxPeEF1QS5tcDQ/X25jX2NhdD0xMDQmX25jX3NpZD01ZTk4NTEmX25jX2h0PXZpZGVvLWxocjYtMi54eC5mYmNkbi5uZXQmX25jX29oYz1lb1Y3WnZVdUllSVE3a052d0ctNkVmYyZlZmc9ZXlKMlpXNWpiMlJsWDNSaFp5STZJbmh3ZGw5d2NtOW5jbVZ6YzJsMlpTNUdRVU5GUWs5UFN5NHVRek11TVRJNE1DNWtZWE5vWDJneU5qUXRZbUZ6YVdNdFoyVnVNbDgzTWpCd0lpd2llSEIyWDJGemMyVjBYMmxrSWpveE1UQTVOVGM0TURrME5qUTRPREkxTENKMmFWOTFjMlZqWVhObFgybGtJam94TURFeU1pd2laSFZ5WVhScGIyNWZjeUk2TVRBMU1Dd2lkWEpzWjJWdVgzTnZkWEpqWlNJNkluZDNkeUo5JmNjYj0xNy0xJnZzPWE5N2U5NjQyODk0ZTg0MmEmX25jX3ZzPUhCa3NGUUlZUldaaVgyVndhR1Z0WlhKaGJDOUZNalF5TXpnMk5rTXhSRVpGT0VVek9UZzBRelV3UkRVek5rWkdNRUZCTmw5dGRGOHhYM1pwWkdWdlgyUmhjMmhwYm1sMExtMXdOQlVBQXNnQkVnQVZBaGhGWm1KZlpYQm9aVzFsY21Gc0x6TTBORUl3TnpWRE1VWkdPVU5GT0VZeE1UUTRPRU13UlRJd1FVVTBRa0UwWDIxMFh6QmZZWFZrYVc5ZlpHRnphR2x1YVhRdWJYQTBGUUlDeUFFU0FDZ0FHQUFiQW9nSGRYTmxYMjlwYkFFeEVuQnliMmR5WlhOemFYWmxYM0psWTJsd1pRRXhGUUFBSnZMMzlJTDV5ZmdERlFJb0FrTXpMQmRBa0dyTXpNek16UmdaWkdGemFGOW9NalkwTFdKaGMybGpMV2RsYmpKZk56SXdjQkVBZFFKbGxKNEJBQSZfbmNfZ2lkPUwteUdvMkZZLV9iMkRKZmV6QjRsbGcmX25jX3p0PTI4Jm9oPTAwX0FmWDRFRXgtazAtaHZYRnRWdkN1NWttMjZpM3pFQ3VQZFlLWjN1aTk4OVBYMlEmb2U9NjhBRjc4NjgmYml0cmF0ZT0xMTkzMjgxJnRhZz1kYXNoX2gyNjQtYmFzaWMtZ2VuMl83MjBw";
+      const videoUrl = atob(encodedSrc);
+      const iframe = document.getElementById('videoIframe');
+      iframe.src = videoUrl;
+      iframe.style.display = 'block';
       document.getElementById('video-overlay').style.display = 'none';
     }
   </script>
@@ -63,14 +60,7 @@
     height: 0;
     overflow: hidden;
   }
-  #coming-soon {
-    background: #111;
-    color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(255,255,255,0.3);
-  }
   </style>
-
   <div id="histats_wrapper"><div id="histats_counter"></div></div>
   <script type="text/javascript">
     var _Hasync = _Hasync || [];
