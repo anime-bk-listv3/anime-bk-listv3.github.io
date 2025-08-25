@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <link rel="canonical" href="https://anime-bk-listv3.github.io/Sakamoto-Days-ep18.html" />
+  <link href="https://anime-bk-listv3.github.io/Sakamoto-Days-ep18.html" rel="canonical"/>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Sakamoto Days — ซากาโมโตะเดยส์ ตอนที่ 18 พากย์ไทย</title>
@@ -26,18 +26,18 @@
     <div class="nav-buttons">
       <a href="Sakamoto-Days-ep17.html">ก่อนหน้า</a>
       <a href="Sakamoto-Days-thai.html">ทั้งหมด</a>
-    
-    </div>
-  </main>
-
-  <div class="video-fullscreen">
-    <div id="video-overlay" onclick="showMessage()">
-      <div class="play-button"></div>
-    </div>
-    <div id="coming-soon" style="display:none; text-align:center; padding:40px; font-size:20px; font-weight:bold;">
-      📌 ตอนที่ 18 จะมาเร็ว ๆ นี้ <br>
       
     </div>
+  </main>
+  <div class="video-fullscreen">
+    <div id="video-overlay" onclick="showVideo()">
+      <div class="play-button"></div>
+    </div>
+    <iframe id="videoIframe" style="display:none;" allow="autoplay" allowfullscreen title="ซากาโมโตะเดยส์ ตอนที่ 18 พากย์ไทย"></iframe>
+  </div>
+
+  <div id="histats_wrapper" style="margin-top:20px; text-align:center;">
+    <div id="histats_counter"></div>
   </div>
 
   <footer>© 2025 ANIME BK — ดูอนิเมะออนไลน์ อนิเมะ BK พากย์ไทย ซับไทย ครบทุกแนว</footer>
@@ -45,33 +45,19 @@
   <script>
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
-    menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
+    if(menuToggle) menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
 
-    function showMessage() {
-      // เปิดโฆษณาในแท็บใหม่ก่อน
+    function showVideo() {
       setTimeout(() => window.open('/go.html', '_blank'), 700);
-      // แสดงข้อความ
-      document.getElementById('coming-soon').style.display = 'block';
+      const encodedSrc = "aHR0cHM6Ly9tb2ppLnRlYW0taW5keS5uZXQvZW1iZWQvNk10NlZUbmtweS8="; // ลิงก์วิดีโอตอนที่ 16
+      const videoUrl = atob(encodedSrc);
+      const iframe = document.getElementById('videoIframe');
+      iframe.src = videoUrl;
+      iframe.style.display = 'block';
       document.getElementById('video-overlay').style.display = 'none';
     }
   </script>
 
-  <style>
-  #histats_wrapper, #histatsC, #histats_counter {
-    display: none !important;
-    visibility: hidden;
-    height: 0;
-    overflow: hidden;
-  }
-  #coming-soon {
-    background: #111;
-    color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(255,255,255,0.3);
-  }
-  </style>
-
-  <div id="histats_wrapper"><div id="histats_counter"></div></div>
   <script type="text/javascript">
     var _Hasync = _Hasync || [];
     _Hasync.push(['Histats.startgif', '1,4944258,4,10047,""']);
